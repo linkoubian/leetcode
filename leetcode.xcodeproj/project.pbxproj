@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52C9585E238554C800313FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9585D238554C800313FBE /* main.m */; };
+		52C95869238A5ECD00313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
+		52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
+		52C9586F238A5FD700313FBE /* Solution+BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */; };
+		52C95872238A649F00313FBE /* Solution+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95871238A649F00313FBE /* Solution+SubString.m */; };
+		52C95880238A65A800313FBE /* SortingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9587F238A65A800313FBE /* SortingTest.m */; };
+		52C95883238A6B5600313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
+		52C95884238A6B5A00313FBE /* Solution+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95871238A649F00313FBE /* Solution+SubString.m */; };
+		52C95885238A6B5A00313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
+		52C95886238A6B5A00313FBE /* Solution+BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */; };
+		52C95888238A6C4900313FBE /* BinaryTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95887238A6C4900313FBE /* BinaryTreeTest.m */; };
+		52C9588A238A70D400313FBE /* SubStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95889238A70D400313FBE /* SubStringTest.m */; };
+		52C9588D238B6BC700313FBE /* Solution+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9588C238B6BC700313FBE /* Solution+Array.m */; };
+		52C9588F238B6BF000313FBE /* ArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9588E238B6BF000313FBE /* ArrayTest.m */; };
+		52C95890238B794E00313FBE /* Solution+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9588C238B6BC700313FBE /* Solution+Array.m */; };
+		52C95893238BE3F300313FBE /* Solution+Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95892238BE3F300313FBE /* Solution+Coins.m */; };
+		52C95894238BE3F300313FBE /* Solution+Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95892238BE3F300313FBE /* Solution+Coins.m */; };
+		52C95896238BEA1D00313FBE /* CoinsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95895238BEA1D00313FBE /* CoinsTest.m */; };
+		52C95899238CCC3E00313FBE /* Solution+Robber.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95898238CCC3E00313FBE /* Solution+Robber.m */; };
+		52C9589A238CCC3E00313FBE /* Solution+Robber.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95898238CCC3E00313FBE /* Solution+Robber.m */; };
+		52C9589C238CD0E000313FBE /* RobberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9589B238CD0E000313FBE /* RobberTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52C95858238554C800313FBE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		52C9585A238554C800313FBE /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C9585D238554C800313FBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52C95867238A5ECD00313FBE /* Solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution.h; sourceTree = "<group>"; };
+		52C95868238A5ECD00313FBE /* Solution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Solution.m; sourceTree = "<group>"; };
+		52C9586A238A5F6000313FBE /* Solution+Sorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Sorting.h"; sourceTree = "<group>"; };
+		52C9586B238A5F6000313FBE /* Solution+Sorting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Sorting.m"; sourceTree = "<group>"; };
+		52C9586D238A5FD700313FBE /* Solution+BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+BinaryTree.h"; sourceTree = "<group>"; };
+		52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+BinaryTree.m"; sourceTree = "<group>"; };
+		52C95870238A649F00313FBE /* Solution+SubString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+SubString.h"; sourceTree = "<group>"; };
+		52C95871238A649F00313FBE /* Solution+SubString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+SubString.m"; sourceTree = "<group>"; };
+		52C95877238A656E00313FBE /* leetcode-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "leetcode-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C9587B238A656E00313FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52C9587F238A65A800313FBE /* SortingTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortingTest.m; sourceTree = "<group>"; };
+		52C95887238A6C4900313FBE /* BinaryTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeTest.m; sourceTree = "<group>"; };
+		52C95889238A70D400313FBE /* SubStringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubStringTest.m; sourceTree = "<group>"; };
+		52C9588B238B6BC700313FBE /* Solution+Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Array.h"; sourceTree = "<group>"; };
+		52C9588C238B6BC700313FBE /* Solution+Array.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Array.m"; sourceTree = "<group>"; };
+		52C9588E238B6BF000313FBE /* ArrayTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayTest.m; sourceTree = "<group>"; };
+		52C95891238BE3F300313FBE /* Solution+Coins.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Coins.h"; sourceTree = "<group>"; };
+		52C95892238BE3F300313FBE /* Solution+Coins.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Coins.m"; sourceTree = "<group>"; };
+		52C95895238BEA1D00313FBE /* CoinsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinsTest.m; sourceTree = "<group>"; };
+		52C95897238CCC3E00313FBE /* Solution+Robber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Robber.h"; sourceTree = "<group>"; };
+		52C95898238CCC3E00313FBE /* Solution+Robber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Robber.m"; sourceTree = "<group>"; };
+		52C9589B238CD0E000313FBE /* RobberTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RobberTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52C95857238554C800313FBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C95874238A656E00313FBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52C95851238554C800313FBE = {
+			isa = PBXGroup;
+			children = (
+				52C9585C238554C800313FBE /* leetcode */,
+				52C95878238A656E00313FBE /* leetcode-test */,
+				52C9585B238554C800313FBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52C9585B238554C800313FBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52C9585A238554C800313FBE /* leetcode */,
+				52C95877238A656E00313FBE /* leetcode-test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52C9585C238554C800313FBE /* leetcode */ = {
+			isa = PBXGroup;
+			children = (
+				52C9585D238554C800313FBE /* main.m */,
+				52C95867238A5ECD00313FBE /* Solution.h */,
+				52C95868238A5ECD00313FBE /* Solution.m */,
+				52C95870238A649F00313FBE /* Solution+SubString.h */,
+				52C95871238A649F00313FBE /* Solution+SubString.m */,
+				52C9586A238A5F6000313FBE /* Solution+Sorting.h */,
+				52C9586B238A5F6000313FBE /* Solution+Sorting.m */,
+				52C9588B238B6BC700313FBE /* Solution+Array.h */,
+				52C9588C238B6BC700313FBE /* Solution+Array.m */,
+				52C9586D238A5FD700313FBE /* Solution+BinaryTree.h */,
+				52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */,
+				52C95891238BE3F300313FBE /* Solution+Coins.h */,
+				52C95892238BE3F300313FBE /* Solution+Coins.m */,
+				52C95897238CCC3E00313FBE /* Solution+Robber.h */,
+				52C95898238CCC3E00313FBE /* Solution+Robber.m */,
+			);
+			path = leetcode;
+			sourceTree = "<group>";
+		};
+		52C95878238A656E00313FBE /* leetcode-test */ = {
+			isa = PBXGroup;
+			children = (
+				52C9587B238A656E00313FBE /* Info.plist */,
+				52C95889238A70D400313FBE /* SubStringTest.m */,
+				52C9587F238A65A800313FBE /* SortingTest.m */,
+				52C9588E238B6BF000313FBE /* ArrayTest.m */,
+				52C95887238A6C4900313FBE /* BinaryTreeTest.m */,
+				52C95895238BEA1D00313FBE /* CoinsTest.m */,
+				52C9589B238CD0E000313FBE /* RobberTest.m */,
+			);
+			path = "leetcode-test";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52C95859238554C800313FBE /* leetcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C95861238554C800313FBE /* Build configuration list for PBXNativeTarget "leetcode" */;
+			buildPhases = (
+				52C95856238554C800313FBE /* Sources */,
+				52C95857238554C800313FBE /* Frameworks */,
+				52C95858238554C800313FBE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = leetcode;
+			productName = leetcode;
+			productReference = 52C9585A238554C800313FBE /* leetcode */;
+			productType = "com.apple.product-type.tool";
+		};
+		52C95876238A656E00313FBE /* leetcode-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C9587C238A656E00313FBE /* Build configuration list for PBXNativeTarget "leetcode-test" */;
+			buildPhases = (
+				52C95873238A656E00313FBE /* Sources */,
+				52C95874238A656E00313FBE /* Frameworks */,
+				52C95875238A656E00313FBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "leetcode-test";
+			productName = "leetcode-test";
+			productReference = 52C95877238A656E00313FBE /* leetcode-test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52C95852238554C800313FBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Balloonsys Inc";
+				TargetAttributes = {
+					52C95859238554C800313FBE = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					52C95876238A656E00313FBE = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 52C95855238554C800313FBE /* Build configuration list for PBXProject "leetcode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52C95851238554C800313FBE;
+			productRefGroup = 52C9585B238554C800313FBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52C95859238554C800313FBE /* leetcode */,
+				52C95876238A656E00313FBE /* leetcode-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52C95875238A656E00313FBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52C95856238554C800313FBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C95899238CCC3E00313FBE /* Solution+Robber.m in Sources */,
+				52C95869238A5ECD00313FBE /* Solution.m in Sources */,
+				52C9586F238A5FD700313FBE /* Solution+BinaryTree.m in Sources */,
+				52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */,
+				52C9585E238554C800313FBE /* main.m in Sources */,
+				52C9588D238B6BC700313FBE /* Solution+Array.m in Sources */,
+				52C95893238BE3F300313FBE /* Solution+Coins.m in Sources */,
+				52C95872238A649F00313FBE /* Solution+SubString.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C95873238A656E00313FBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C95883238A6B5600313FBE /* Solution.m in Sources */,
+				52C95890238B794E00313FBE /* Solution+Array.m in Sources */,
+				52C95884238A6B5A00313FBE /* Solution+SubString.m in Sources */,
+				52C95896238BEA1D00313FBE /* CoinsTest.m in Sources */,
+				52C9589C238CD0E000313FBE /* RobberTest.m in Sources */,
+				52C9589A238CCC3E00313FBE /* Solution+Robber.m in Sources */,
+				52C95886238A6B5A00313FBE /* Solution+BinaryTree.m in Sources */,
+				52C9588A238A70D400313FBE /* SubStringTest.m in Sources */,
+				52C95880238A65A800313FBE /* SortingTest.m in Sources */,
+				52C9588F238B6BF000313FBE /* ArrayTest.m in Sources */,
+				52C95888238A6C4900313FBE /* BinaryTreeTest.m in Sources */,
+				52C95885238A6B5A00313FBE /* Solution+Sorting.m in Sources */,
+				52C95894238BE3F300313FBE /* Solution+Coins.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52C9585F238554C800313FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52C95860238554C800313FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52C95862238554C800313FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52C95863238554C800313FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		52C9587D238A656E00313FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "leetcode-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balloonsys.leetcode-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52C9587E238A656E00313FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "leetcode-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balloonsys.leetcode-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52C95855238554C800313FBE /* Build configuration list for PBXProject "leetcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C9585F238554C800313FBE /* Debug */,
+				52C95860238554C800313FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52C95861238554C800313FBE /* Build configuration list for PBXNativeTarget "leetcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C95862238554C800313FBE /* Debug */,
+				52C95863238554C800313FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52C9587C238A656E00313FBE /* Build configuration list for PBXNativeTarget "leetcode-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C9587D238A656E00313FBE /* Debug */,
+				52C9587E238A656E00313FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52C95852238554C800313FBE /* Project object */;
+}
