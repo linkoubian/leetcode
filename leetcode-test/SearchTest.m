@@ -72,4 +72,18 @@
     XCTAssert(ABS(median - 0) < DBL_EPSILON);
 }
 
+- (void)testSqrt {
+    NSInteger sqrt = [[Solution new] sqrt:2];
+    XCTAssert(sqrt == 1);
+    
+    sqrt = [[Solution new] sqrt:3];
+    XCTAssert(sqrt == 1);
+    
+    sqrt = [[Solution new] sqrt:4];
+    XCTAssert(sqrt == 2);
+    
+    sqrt = [[Solution new] sqrt:5];
+    XCTAssert(sqrt == 2);
+}
+
 @end

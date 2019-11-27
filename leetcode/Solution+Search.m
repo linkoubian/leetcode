@@ -100,8 +100,47 @@
     if ((aArray.count + bArray.count) % 2 == 0) {
         return (MAX(aLeft, bLeft) + MIN(aRight, bRight)) / 2.0;
     } else {
+        // 取左边较大值，呼应前面 half 取值时用 total 先加 1 再除以 2
         return MAX(aLeft, bLeft);
     }
+}
+
+/*!
+ *  @brief      Sqrt(x)
+ *  @discussion 利用二分法s求平方根
+ *  @see        http://www.goodtecher.com/leetcode-69-sqrtx-java/
+ */
+- (NSInteger)sqrt:(NSInteger)n {
+    if (n == 0 || n == 1) {
+        return n;
+    }
+    
+    NSInteger left = 1;
+    NSInteger right = n;
+    NSInteger mid = (left + right) / 2;
+    
+    while (left <= right && mid * mid != n) {
+        // mid 太大
+        if (mid * mid > n) {
+            right = mid - 1;
+        }
+        // mid 太小
+        else if ((mid + 1) * (mid + 1) < n) {
+            left = mid + 1;
+        }
+        // mid 下一个刚好
+        else if ((mid + 1) * (mid + 1) == n) {
+            return mid + 1;
+        }
+        // mid 不够大，且 mid+1 太大
+        else {
+            return mid;
+        }
+        
+        mid = (left + right) / 2;
+    }
+    
+    return mid;
 }
 
 @end

@@ -12,5 +12,6 @@
 
 - (NSInteger)search:(NSInteger)key inArray:(NSArray *)array;
 - (double)medianOfArray:(NSArray *)aArray andArray:(NSArray *)bArray;
+- (NSInteger)sqrt:(NSInteger)n;
 
 @end
