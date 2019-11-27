@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522A99D2238E14F300A411C6 /* Solution+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A99D1238E14F300A411C6 /* Solution+Search.m */; };
+		522A99D3238E14F300A411C6 /* Solution+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A99D1238E14F300A411C6 /* Solution+Search.m */; };
+		522A99D5238E157F00A411C6 /* SearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A99D4238E157F00A411C6 /* SearchTest.m */; };
 		52C9585E238554C800313FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9585D238554C800313FBE /* main.m */; };
 		52C95869238A5ECD00313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
 		52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
@@ -43,6 +46,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		522A99D0238E14F300A411C6 /* Solution+Search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Search.h"; sourceTree = "<group>"; };
+		522A99D1238E14F300A411C6 /* Solution+Search.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Search.m"; sourceTree = "<group>"; };
+		522A99D4238E157F00A411C6 /* SearchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTest.m; sourceTree = "<group>"; };
 		52C9585A238554C800313FBE /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9585D238554C800313FBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52C95867238A5ECD00313FBE /* Solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution.h; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 				52C95892238BE3F300313FBE /* Solution+Coins.m */,
 				52C95897238CCC3E00313FBE /* Solution+Robber.h */,
 				52C95898238CCC3E00313FBE /* Solution+Robber.m */,
+				522A99D0238E14F300A411C6 /* Solution+Search.h */,
+				522A99D1238E14F300A411C6 /* Solution+Search.m */,
 			);
 			path = leetcode;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 				52C95887238A6C4900313FBE /* BinaryTreeTest.m */,
 				52C95895238BEA1D00313FBE /* CoinsTest.m */,
 				52C9589B238CD0E000313FBE /* RobberTest.m */,
+				522A99D4238E157F00A411C6 /* SearchTest.m */,
 			);
 			path = "leetcode-test";
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				52C9586F238A5FD700313FBE /* Solution+BinaryTree.m in Sources */,
 				52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */,
 				52C9585E238554C800313FBE /* main.m in Sources */,
+				522A99D2238E14F300A411C6 /* Solution+Search.m in Sources */,
 				52C9588D238B6BC700313FBE /* Solution+Array.m in Sources */,
 				52C95893238BE3F300313FBE /* Solution+Coins.m in Sources */,
 				52C95872238A649F00313FBE /* Solution+SubString.m in Sources */,
@@ -250,7 +260,9 @@
 				52C95896238BEA1D00313FBE /* CoinsTest.m in Sources */,
 				52C9589C238CD0E000313FBE /* RobberTest.m in Sources */,
 				52C9589A238CCC3E00313FBE /* Solution+Robber.m in Sources */,
+				522A99D3238E14F300A411C6 /* Solution+Search.m in Sources */,
 				52C95886238A6B5A00313FBE /* Solution+BinaryTree.m in Sources */,
+				522A99D5238E157F00A411C6 /* SearchTest.m in Sources */,
 				52C9588A238A70D400313FBE /* SubStringTest.m in Sources */,
 				52C95880238A65A800313FBE /* SortingTest.m in Sources */,
 				52C9588F238B6BF000313FBE /* ArrayTest.m in Sources */,
