@@ -11,5 +11,6 @@
 @interface Solution (Search)
 
 - (NSInteger)search:(NSInteger)key inArray:(NSArray *)array;
+- (double)medianOfArray:(NSArray *)aArray andArray:(NSArray *)bArray;
 
 @end

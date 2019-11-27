@@ -30,4 +30,46 @@
     XCTAssert(pos == 6 || pos == 7);
 }
 
+- (void)testMedianOfArray {
+    NSArray *aArray = @[@1, @2, @3];
+    NSArray *bArray = @[            @4, @5, @6];
+    double median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 3.5) < DBL_EPSILON);
+    
+    aArray = @[@1, @2];
+    bArray = @[         @3, @4, @5];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 3) < DBL_EPSILON);
+    
+    aArray = @[@1, @2];
+    bArray = @[         @3, @4, @5, @6];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 3.5) < DBL_EPSILON);
+    
+    aArray = @[@1, @2];
+    bArray = @[         @3, @4, @5, @6, @7];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 4) < DBL_EPSILON);
+    
+    aArray = @[    @2,      @4];
+    bArray = @[@1,      @3,     @5];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 3) < DBL_EPSILON);
+    
+    aArray = @[             @9, @10];
+    bArray = @[@2, @4, @6];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 6) < DBL_EPSILON);
+    
+    aArray = @[];
+    bArray = @[@2, @4, @6];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 4) < DBL_EPSILON);
+    
+    aArray = @[];
+    bArray = @[];
+    median = [[Solution new] medianOfArray:aArray andArray:bArray];
+    XCTAssert(ABS(median - 0) < DBL_EPSILON);
+}
+
 @end
