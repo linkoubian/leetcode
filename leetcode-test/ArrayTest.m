@@ -48,4 +48,11 @@
     XCTAssert(max == 6);
 }
 
+- (void)testRemoveDuplicates {
+    NSArray *array = @[@0, @1, @1, @2];
+    NSArray *results = [[Solution new] removeDuplicates:array.mutableCopy];
+    NSLog(@"removeDuplicates: %@", results);
+    XCTAssert([results count] == 3);
+}
+
 @end

@@ -17,4 +17,6 @@
 // 连续子数组最大和, DP 版本
 - (NSInteger)maxSubArrayDP:(NSArray *)array;
 
+- (NSArray *)removeDuplicates:(NSMutableArray *)nums;
+
 @end

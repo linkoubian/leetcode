@@ -88,4 +88,26 @@
     return MAX(dp[array.count-1][0], dp[array.count-1][1]);
 }
 
+/*!
+ *  @brief      移除数组中重复元素
+ *  @discussion 输入数组是排序后的
+ */
+- (NSArray *)removeDuplicates:(NSMutableArray *)nums {
+    if (nums.count == 0) {
+        return [nums copy];
+    }
+    
+    int i = 0;
+    for (int j = 1; j < nums.count; j++) {
+        if ([nums[j] integerValue] != [nums[i] integerValue]) {
+            i++;
+            if (i != j) {
+                nums[i] = nums[j];
+            }
+        }
+    }
+    
+    return [nums subarrayWithRange:NSMakeRange(0, i+1)];
+}
+
 @end
