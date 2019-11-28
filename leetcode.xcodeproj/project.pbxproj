@@ -14,14 +14,14 @@
 		52C95869238A5ECD00313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
 		52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
 		52C9586F238A5FD700313FBE /* Solution+BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */; };
-		52C95872238A649F00313FBE /* Solution+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95871238A649F00313FBE /* Solution+SubString.m */; };
+		52C95872238A649F00313FBE /* Solution+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95871238A649F00313FBE /* Solution+String.m */; };
 		52C95880238A65A800313FBE /* SortingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9587F238A65A800313FBE /* SortingTest.m */; };
 		52C95883238A6B5600313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
-		52C95884238A6B5A00313FBE /* Solution+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95871238A649F00313FBE /* Solution+SubString.m */; };
+		52C95884238A6B5A00313FBE /* Solution+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95871238A649F00313FBE /* Solution+String.m */; };
 		52C95885238A6B5A00313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
 		52C95886238A6B5A00313FBE /* Solution+BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */; };
 		52C95888238A6C4900313FBE /* BinaryTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95887238A6C4900313FBE /* BinaryTreeTest.m */; };
-		52C9588A238A70D400313FBE /* SubStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95889238A70D400313FBE /* SubStringTest.m */; };
+		52C9588A238A70D400313FBE /* StringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95889238A70D400313FBE /* StringTest.m */; };
 		52C9588D238B6BC700313FBE /* Solution+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9588C238B6BC700313FBE /* Solution+Array.m */; };
 		52C9588F238B6BF000313FBE /* ArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9588E238B6BF000313FBE /* ArrayTest.m */; };
 		52C95890238B794E00313FBE /* Solution+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9588C238B6BC700313FBE /* Solution+Array.m */; };
@@ -57,13 +57,13 @@
 		52C9586B238A5F6000313FBE /* Solution+Sorting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Sorting.m"; sourceTree = "<group>"; };
 		52C9586D238A5FD700313FBE /* Solution+BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+BinaryTree.h"; sourceTree = "<group>"; };
 		52C9586E238A5FD700313FBE /* Solution+BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+BinaryTree.m"; sourceTree = "<group>"; };
-		52C95870238A649F00313FBE /* Solution+SubString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+SubString.h"; sourceTree = "<group>"; };
-		52C95871238A649F00313FBE /* Solution+SubString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+SubString.m"; sourceTree = "<group>"; };
+		52C95870238A649F00313FBE /* Solution+String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+String.h"; sourceTree = "<group>"; };
+		52C95871238A649F00313FBE /* Solution+String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+String.m"; sourceTree = "<group>"; };
 		52C95877238A656E00313FBE /* leetcode-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "leetcode-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9587B238A656E00313FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C9587F238A65A800313FBE /* SortingTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortingTest.m; sourceTree = "<group>"; };
 		52C95887238A6C4900313FBE /* BinaryTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeTest.m; sourceTree = "<group>"; };
-		52C95889238A70D400313FBE /* SubStringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubStringTest.m; sourceTree = "<group>"; };
+		52C95889238A70D400313FBE /* StringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringTest.m; sourceTree = "<group>"; };
 		52C9588B238B6BC700313FBE /* Solution+Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Array.h"; sourceTree = "<group>"; };
 		52C9588C238B6BC700313FBE /* Solution+Array.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Array.m"; sourceTree = "<group>"; };
 		52C9588E238B6BF000313FBE /* ArrayTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayTest.m; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 				52C9585D238554C800313FBE /* main.m */,
 				52C95867238A5ECD00313FBE /* Solution.h */,
 				52C95868238A5ECD00313FBE /* Solution.m */,
-				52C95870238A649F00313FBE /* Solution+SubString.h */,
-				52C95871238A649F00313FBE /* Solution+SubString.m */,
+				52C95870238A649F00313FBE /* Solution+String.h */,
+				52C95871238A649F00313FBE /* Solution+String.m */,
 				52C9586A238A5F6000313FBE /* Solution+Sorting.h */,
 				52C9586B238A5F6000313FBE /* Solution+Sorting.m */,
 				52C9588B238B6BC700313FBE /* Solution+Array.h */,
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				52C9587B238A656E00313FBE /* Info.plist */,
-				52C95889238A70D400313FBE /* SubStringTest.m */,
+				52C95889238A70D400313FBE /* StringTest.m */,
 				52C9587F238A65A800313FBE /* SortingTest.m */,
 				52C9588E238B6BF000313FBE /* ArrayTest.m */,
 				52C95887238A6C4900313FBE /* BinaryTreeTest.m */,
@@ -246,7 +246,7 @@
 				522A99D2238E14F300A411C6 /* Solution+Search.m in Sources */,
 				52C9588D238B6BC700313FBE /* Solution+Array.m in Sources */,
 				52C95893238BE3F300313FBE /* Solution+Coins.m in Sources */,
-				52C95872238A649F00313FBE /* Solution+SubString.m in Sources */,
+				52C95872238A649F00313FBE /* Solution+String.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,14 +256,14 @@
 			files = (
 				52C95883238A6B5600313FBE /* Solution.m in Sources */,
 				52C95890238B794E00313FBE /* Solution+Array.m in Sources */,
-				52C95884238A6B5A00313FBE /* Solution+SubString.m in Sources */,
+				52C95884238A6B5A00313FBE /* Solution+String.m in Sources */,
 				52C95896238BEA1D00313FBE /* CoinsTest.m in Sources */,
 				52C9589C238CD0E000313FBE /* RobberTest.m in Sources */,
 				52C9589A238CCC3E00313FBE /* Solution+Robber.m in Sources */,
 				522A99D3238E14F300A411C6 /* Solution+Search.m in Sources */,
 				52C95886238A6B5A00313FBE /* Solution+BinaryTree.m in Sources */,
 				522A99D5238E157F00A411C6 /* SearchTest.m in Sources */,
-				52C9588A238A70D400313FBE /* SubStringTest.m in Sources */,
+				52C9588A238A70D400313FBE /* StringTest.m in Sources */,
 				52C95880238A65A800313FBE /* SortingTest.m in Sources */,
 				52C9588F238B6BF000313FBE /* ArrayTest.m in Sources */,
 				52C95888238A6C4900313FBE /* BinaryTreeTest.m in Sources */,

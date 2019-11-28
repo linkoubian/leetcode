@@ -1,5 +1,5 @@
 //
-//  Solution+SubString.h
+//  Solution+String.h
 //  leetcode
 //
 //  Created by Linkou Bian on 2019/11/24.
@@ -8,7 +8,7 @@
 
 #import "Solution.h"
 
-@interface Solution (SubString)
+@interface Solution (String)
 
 // 计算 s 中不含重复字符的最长子串的长度
 - (NSUInteger)lengthOfLongestSubstring:(NSString *)s;
@@ -21,5 +21,7 @@
 
 // 在俩字符串中找最长公共子串
 - (NSString *)longestCommonSubStringOf:(NSString *)aStr andString:(NSString *)bStr;
+
+- (NSArray *)letterCombinations:(NSArray *)digits;
 
 @end

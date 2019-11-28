@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Solution+SubString.h"
+#import "Solution+String.h"
 
 @interface SubStringTest : XCTestCase
 
@@ -64,6 +64,14 @@
     
     NSLog(@"longestCommonSubString is %@", lcs);
     XCTAssert([lcs isEqualToString:@"abcdez"]);
+}
+
+- (void)testletterCombinations {
+    NSArray *digits = @[@2, @6];
+    NSArray *combinations = [[Solution new] letterCombinations:digits];
+    
+    NSLog(@"letterCombinations: %@", combinations);
+    XCTAssert(combinations.count == 9);
 }
 
 @end

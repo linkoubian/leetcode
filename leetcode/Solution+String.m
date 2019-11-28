@@ -1,14 +1,14 @@
 //
-//  Solution+SubString.m
+//  Solution+String.m
 //  leetcode
 //
 //  Created by Linkou Bian on 2019/11/24.
 //  Copyright © 2019 Balloonsys Inc. All rights reserved.
 //
 
-#import "Solution+SubString.h"
+#import "Solution+String.h"
 
-@implementation Solution (SubString)
+@implementation Solution (String)
 
 /*!
  *  @brief      计算 s 中不含重复字符的最长子串的长度
@@ -151,6 +151,49 @@
     
     NSUInteger loc = (end - 1) - (max - 1);
     return [aStr substringWithRange:NSMakeRange(loc, max)];
+}
+
+- (void)letterCombinations:(NSMutableArray *)combinations forDigits:(NSArray<NSNumber *> *)digits withConstructingStr:(NSMutableString *)str andDict:(NSDictionary *)dict {
+    if (str.length == digits.count) {
+        [combinations addObject:str.copy];
+        return;
+    }
+    
+    NSString *chars = dict[digits[str.length]];
+    for (int i = 0; i < chars.length; i++) {
+        unichar ch = [chars characterAtIndex:i];
+        [str appendFormat:@"%c", ch];
+        [self letterCombinations:combinations forDigits:digits withConstructingStr:str andDict:dict];
+        [str deleteCharactersInRange:NSMakeRange(str.length - 1, 1)];
+    }
+}
+
+/*!
+ *  @brief      电话号码的字母组合
+ */
+- (NSArray<NSString *> *)letterCombinations:(NSArray<NSNumber *> *)digits {
+    NSMutableArray<NSString *> *results = [NSMutableArray new];
+    
+    if (digits.count == 0) {
+        return [results copy];
+    }
+    
+    
+    NSDictionary *dict = @{@0: @"",
+     @1: @"",
+     @2: @"abc",
+     @3: @"def",
+     @4: @"ghi",
+     @5: @"jkl",
+     @6: @"mno",
+     @7: @"pqrs",
+     @8: @"tuv",
+     @9: @"wxyz",
+    };
+    
+    [self letterCombinations:results forDigits:digits withConstructingStr:[@"" mutableCopy] andDict:dict];
+    
+    return [results copy];
 }
 
 @end
