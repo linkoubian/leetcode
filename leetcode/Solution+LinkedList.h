@@ -20,5 +20,6 @@
 @interface Solution (LinkedList)
 
 - (ListNode *)removeNth:(NSUInteger)n fromEndOfList:(ListNode *)head;
+- (ListNode *)mergeList:(ListNode *)headA withAnother:(ListNode *)headB;
 
 @end

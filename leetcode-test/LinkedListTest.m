@@ -12,13 +12,15 @@
 @interface LinkedListTest : XCTestCase
 
 @property (nonatomic, strong) ListNode *head;
+@property (nonatomic, strong) ListNode *sortedHeadA;
+@property (nonatomic, strong) ListNode *sortedHeadB;
 
 @end
 
 @implementation LinkedListTest
 
 - (void)setUp {
-    self.head = [[ListNode alloc] initWithVal:100];
+    self.head = [[ListNode alloc] initWithVal:0];
     ListNode *node9 = [[ListNode alloc] initWithVal:9];
     ListNode *node22 = [[ListNode alloc] initWithVal:22];
     ListNode *node25 = [[ListNode alloc] initWithVal:25];
@@ -30,18 +32,36 @@
     node9.next = node41;
     node41.next = node88;
     node88.next = node25;
+    
+    self.sortedHeadA = [[ListNode alloc] initWithVal:10];
+    ListNode *node23 = [[ListNode alloc] initWithVal:23];
+    ListNode *node89 = [[ListNode alloc] initWithVal:89];
+    self.sortedHeadA.next = node23;
+    node23.next = node89;
+    
+    self.sortedHeadB = [[ListNode alloc] initWithVal:8];
+    ListNode *node24 = [[ListNode alloc] initWithVal:24];
+    ListNode *node90 = [[ListNode alloc] initWithVal:90];
+    
+    self.sortedHeadB.next = node24;
+    node24.next = node90;
 }
 
 - (void)testRemoveNthFromEndOfList {
     NSLog(@"originalList: %@", self.head);
     ListNode *result = [[Solution new] removeNth:2 fromEndOfList:self.head];
     NSLog(@"removeNthFromEndOfList: %@", result);
+    
+    result = [[Solution new] removeNth:0 fromEndOfList:self.head];
+    NSLog(@"removeNthFromEndOfList: %@", result);
 }
 
-- (void)testRemoveZeroFromEndOfList {
-    NSLog(@"originalList: %@", self.head);
-    ListNode *result = [[Solution new] removeNth:0 fromEndOfList:self.head];
-    NSLog(@"removeNthFromEndOfList: %@", result);
+- (void)testMergeLists {
+    ListNode *result = [[Solution new] mergeList:self.sortedHeadA withAnother:self.sortedHeadB];
+    NSLog(@"mergeLists: %@", result);
+    
+    result = [[Solution new] mergeList:[[ListNode alloc] initWithVal:25] withAnother:result];
+    NSLog(@"mergeLists: %@", result);
 }
 
 @end
