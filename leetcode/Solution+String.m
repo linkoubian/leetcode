@@ -153,6 +153,7 @@
     return [aStr substringWithRange:NSMakeRange(loc, max)];
 }
 
+// 回溯法, 另外可以参考按层打印 Binary Tree 节点的方法（使用队列）
 - (void)letterCombinations:(NSMutableArray *)combinations forDigits:(NSArray<NSNumber *> *)digits withConstructingStr:(NSMutableString *)str andDict:(NSDictionary *)dict {
     if (str.length == digits.count) {
         [combinations addObject:str.copy];
@@ -194,6 +195,28 @@
     [self letterCombinations:results forDigits:digits withConstructingStr:[@"" mutableCopy] andDict:dict];
     
     return [results copy];
+}
+
+- (NSInteger)posOfString:(NSString *)str inAnotherString:(NSString *)string {
+    if (str.length == 0 || str.length > string.length) {
+        return -1;
+    }
+    
+    for (int i = 0; i < string.length - str.length + 1; i++) {
+        // 从 string 的 i 字符开始，连续比较 str.length 个字符
+        int j;
+        for (j = 0; j < str.length; j++) {
+            if ([string characterAtIndex:i+j] != [str characterAtIndex:j]) {
+                break;
+            }
+        }
+        
+        if (j == str.length) {
+            return i;
+        }
+    }
+    
+    return -1;
 }
 
 @end
