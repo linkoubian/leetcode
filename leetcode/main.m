@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Solution.h"
+#import "NSArray+DeltaCoder.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"leetcode console");
+        Solution *s = [Solution new];
+        NSArray *results = [s groupAnagrams:@[@"pear", @"amleth", @"reap", @"dormitory", @"tinsel", @"dirty room", @"hamlet", @"listen", @"silent"]];
+        NSLog(@"%@", results);
     }
     
     return 0;

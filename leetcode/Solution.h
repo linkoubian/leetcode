@@ -19,4 +19,6 @@ void printArrays(int row, int col, long data[row][col]);
  */
 @interface Solution : NSObject
 
+- (NSArray *)groupAnagrams:(NSArray<NSString *> *)lines;
+
 @end
