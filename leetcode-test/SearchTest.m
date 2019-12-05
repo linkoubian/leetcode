@@ -86,4 +86,19 @@
     XCTAssert(sqrt == 2);
 }
 
+- (void)testRangeOfKeyInArray {
+    NSArray *array = @[@-16, @2, @8, @21, @48, @51, @73, @73, @91];
+    NSArray *result = [[Solution new] rangeOfTarget:73 inArray:array];
+    XCTAssert([result[0] integerValue] == 6);
+    XCTAssert([result[1] integerValue] == 7);
+    
+    result = [[Solution new] rangeOfTarget:1 inArray:array];
+    XCTAssert([result[0] integerValue] == -1);
+    XCTAssert([result[1] integerValue] == -1);
+    
+    result = [[Solution new] rangeOfTarget:8 inArray:array];
+    XCTAssert([result[0] integerValue] == 2);
+    XCTAssert([result[1] integerValue] == 2);
+}
+
 @end

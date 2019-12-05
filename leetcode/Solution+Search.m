@@ -107,7 +107,7 @@
 
 /*!
  *  @brief      Sqrt(x)
- *  @discussion 利用二分法s求平方根
+ *  @discussion 利用二分法求平方根
  *  @see        http://www.goodtecher.com/leetcode-69-sqrtx-java/
  */
 - (NSInteger)sqrt:(NSInteger)n {
@@ -141,6 +141,69 @@
     }
     
     return mid;
+}
+
+/*!
+ *  @brief      在有序数组中，找到目标值最左及最右坐标
+ *  @discussion 知道目标值的最左最右位置后，就可以计算目标值的数量
+ */
+- (NSArray *)rangeOfTarget:(NSInteger)target inArray:(NSArray *)array {
+    NSMutableArray *results = [NSMutableArray new];
+    results[0] = @(-1);
+    results[1] = @(-1);
+    
+    int left = 0;
+    int right = (int)array.count - 1;
+    
+    // 至少三个元素
+    while (left + 1 < right) {
+        int mid = (left + right) / 2;
+        
+        if ([array[mid] integerValue] == target) {
+            right = mid;
+        } else if ([array[mid] integerValue] > target) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    
+    // 最后两个或1个元素，先看右边的，确保 results[0] 是最左边的
+    if ([array[right] integerValue] == target) {
+        results[0] = @(right);
+    }
+    
+    if ([array[left] integerValue] == target) {
+        results[0] = @(left);
+    }
+    
+    // 同理，处理最右的位置
+    left = 0;
+    right = (int)array.count - 1;
+    
+    while (left + 1 < right) {
+        int mid = (left + right) / 2;
+        
+        if ([array[mid] integerValue] == target) {
+            left = mid;
+        } else if ([array[mid] integerValue] > target) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+        
+        mid = (left + right) / 2;
+    }
+    
+    if ([array[left] integerValue] == target) {
+        results[1] = @(left);
+    }
+    
+    if ([array[right] integerValue] == target) {
+        results[1] = @(right);
+    }
+    
+    return results;
 }
 
 @end
