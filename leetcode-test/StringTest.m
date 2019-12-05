@@ -74,4 +74,21 @@
     XCTAssert(combinations.count == 9);
 }
 
+- (void)testPosOfSubString {
+    NSString *str = @"an";
+    NSString *string = @"pinganfang";
+    
+    NSInteger pos = [[Solution new] posOfString:str inAnotherString:string];
+    XCTAssert(pos == 4);
+    
+    pos = [[Solution new] posOfString:string inAnotherString:str];
+    XCTAssert(pos == -1);
+    
+    pos = [[Solution new] posOfString:str inAnotherString:str];
+    XCTAssert(pos == 0);
+    
+    pos = [[Solution new] posOfString:@"hao" inAnotherString:string];
+    XCTAssert(pos == -1);
+}
+
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Solution.h"
+#import "NSArray+DeltaCoder.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

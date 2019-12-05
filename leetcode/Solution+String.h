@@ -22,6 +22,9 @@
 // 在俩字符串中找最长公共子串
 - (NSString *)longestCommonSubStringOf:(NSString *)aStr andString:(NSString *)bStr;
 
+// 根据输入的电话机数字序列，返回可能的字母组合
 - (NSArray *)letterCombinations:(NSArray *)digits;
+
+- (NSInteger)posOfString:(NSString *)str inAnotherString:(NSString *)string;
 
 @end

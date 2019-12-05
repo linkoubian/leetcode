@@ -68,4 +68,34 @@
     return dummyNode.next;
 }
 
+/*!
+ *  @brief      将排序后的两个 List 合并成一个有序列表
+ */
+- (ListNode *)mergeList:(ListNode *)headA withAnother:(ListNode *)headB {
+    ListNode *dummyNode = [[ListNode alloc] initWithVal:0];
+    ListNode *pnode = dummyNode;
+    
+    while (headA && headB) {
+        if (headA.value <= headB.value) {
+            pnode.next = headA;
+            headA = headA.next;
+        } else {
+            pnode.next = headB;
+            headB = headB.next;
+        }
+        
+        pnode = pnode.next;
+    }
+    
+    if (headA) {
+        pnode.next = headA;
+    }
+    
+    if (headB) {
+        pnode.next = headB;
+    }
+    
+    return dummyNode.next;
+}
+
 @end
