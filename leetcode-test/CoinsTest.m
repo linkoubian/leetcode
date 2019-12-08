@@ -29,4 +29,10 @@
     XCTAssert(ways == 5);
 }
 
+- (void)testCombinationsOfTarget {
+    NSArray *candidates = @[@2, @6, @3, @7];
+    NSArray *combinations = [[Solution new] combinationsToTarget:7 with:candidates];
+    NSLog(@"combinations: %@", combinations);
+}
+
 @end

@@ -81,4 +81,40 @@
     return dp[sum][coins.count];
 }
 
+- (void)combinations:(NSMutableArray *)results toTarget:(NSInteger)target withConstructingArray:(NSArray *)tempArray sourceArray:(NSArray *)sourceArray startIndex:(NSUInteger)startIndex {
+    if (target == 0) {
+        [results addObject:tempArray];
+        return;
+    }
+    
+    if (target < 0) {
+        return;
+    }
+    
+    // startIndex 避免 2, 2, 3 和 2, 3, 2 算两种组合
+    for (NSUInteger i = startIndex; i < sourceArray.count; i++) {
+        if ([sourceArray[i] integerValue] > target) {
+            break;
+        }
+        
+        NSMutableArray *constructingArray = [tempArray mutableCopy];
+        [constructingArray addObject:sourceArray[i]];
+        
+        [self combinations:results toTarget:(target - [sourceArray[i] integerValue]) withConstructingArray:constructingArray sourceArray:sourceArray startIndex:i];
+    }
+}
+
+- (NSArray *)combinationsToTarget:(NSUInteger)target with:(NSArray *)array {
+    NSMutableArray *results = [NSMutableArray new];
+    
+    if ([array count] == 0) {
+        return results;
+    }
+    
+    NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(compare:)];
+    [self combinations:results toTarget:target withConstructingArray:@[] sourceArray:sortedArray startIndex:0];
+    
+    return results;
+}
+
 @end
