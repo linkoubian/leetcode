@@ -37,6 +37,30 @@
     return mid;
 }
 
+- (NSInteger)position:(NSInteger)target inArray:(NSArray *)array {
+    NSInteger start = 0;
+    NSInteger end = array.count - 1;
+    
+    while (start + 1 < end) {
+        NSInteger mid = start + (end - start) / 2;
+        if ([array[mid] integerValue] == target) {
+            return mid;
+        } else if ([array[mid] integerValue] < target) {
+            start = mid + 1;
+        } else {
+            end = mid - 1;
+        }
+    }
+    
+    if ([array[end] integerValue] < target) {
+        return end + 1;
+    } else if ([array[start] integerValue] >= target) {
+        return start;
+    } else {
+        return end;
+    }
+}
+
 - (double)medianOfArray:(NSArray *)array {
     if (array.count == 0) {
         return 0;

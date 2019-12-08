@@ -30,6 +30,21 @@
     XCTAssert(pos == 6 || pos == 7);
 }
 
+- (void)testSearchOrInsertPos {
+    NSArray *array = @[@1, @3, @5, @6];
+    NSInteger pos = [[Solution new] position:5 inArray:array];
+    XCTAssert(pos == 2);
+    
+    pos = [[Solution new] position:2 inArray:array];
+    XCTAssert(pos == 1);
+    
+    pos = [[Solution new] position:7 inArray:array];
+    XCTAssert(pos == 4);
+    
+    pos = [[Solution new] position:0 inArray:array];
+    XCTAssert(pos == 0);
+}
+
 - (void)testMedianOfArray {
     NSArray *aArray = @[@1, @2, @3];
     NSArray *bArray = @[            @4, @5, @6];
