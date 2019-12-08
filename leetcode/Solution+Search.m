@@ -15,26 +15,34 @@
  *  @see        https://youtu.be/UeUyTbtFxQQ
  *  @return     位置, -1 表示未找到
  */
-- (NSInteger)search:(NSInteger)key inArray:(NSArray *)array {
-    NSUInteger start = 0;
-    NSUInteger end = array.count - 1;
-    NSUInteger mid = (start + end) / 2;
-    
-    while (start <= end && [array[mid] integerValue] != key) {
-        if ([array[mid] integerValue] > key) {
-            end = mid - 1;
-        } else {
-            start = mid + 1;
-        }
-        
-        mid = (start + end) / 2;
-    }
-    
-    if (start > end) {
+- (NSInteger)search:(NSInteger)target inArray:(NSArray *)array {
+    if ([array count] == 0) {
         return -1;
     }
     
-    return mid;
+    NSUInteger start = 0;
+    NSUInteger end = array.count - 1;
+    
+    while (start + 1 < end) {
+        NSInteger mid = start + (end - start) / 2;
+        if ([array[mid] integerValue] == target) {
+            return mid;
+        } else if ([array[mid] integerValue] > target) {
+            end = mid;
+        } else {
+            start = mid;
+        }
+    }
+    
+    if ([array[start] integerValue] == target) {
+        return start;
+    }
+    
+    if ([array[end] integerValue] == target) {
+        return end;
+    }
+    
+    return -1;
 }
 
 - (NSInteger)position:(NSInteger)target inArray:(NSArray *)array {
@@ -134,37 +142,26 @@
  *  @discussion 利用二分法求平方根
  *  @see        http://www.goodtecher.com/leetcode-69-sqrtx-java/
  */
-- (NSInteger)sqrt:(NSInteger)n {
-    if (n == 0 || n == 1) {
-        return n;
-    }
+- (NSUInteger)sqrt:(NSUInteger)n {
+    NSUInteger start = 0;
+    NSUInteger end = n;
     
-    NSInteger left = 1;
-    NSInteger right = n;
-    NSInteger mid = (left + right) / 2;
-    
-    while (left <= right && mid * mid != n) {
-        // mid 太大
-        if (mid * mid > n) {
-            right = mid - 1;
-        }
-        // mid 太小
-        else if ((mid + 1) * (mid + 1) < n) {
-            left = mid + 1;
-        }
-        // mid 下一个刚好
-        else if ((mid + 1) * (mid + 1) == n) {
-            return mid + 1;
-        }
-        // mid 不够大，且 mid+1 太大
-        else {
+    while (start + 1 < end) {
+        NSUInteger mid = start + (end - start) / 2;
+        if (mid * mid == n) {
             return mid;
+        } else if (mid * mid > n) {
+            end = mid;
+        } else {
+            start = mid;
         }
-        
-        mid = (left + right) / 2;
     }
     
-    return mid;
+    if (end * end == n) {
+        return end;
+    }
+    
+    return start;
 }
 
 /*!
@@ -176,55 +173,53 @@
     results[0] = @(-1);
     results[1] = @(-1);
     
-    int left = 0;
-    int right = (int)array.count - 1;
+    int start = 0;
+    int end = (int)array.count - 1;
     
     // 至少三个元素
-    while (left + 1 < right) {
-        int mid = (left + right) / 2;
+    while (start + 1 < end) {
+        int mid = start + (end - start) / 2;
         
         if ([array[mid] integerValue] == target) {
-            right = mid;
+            end = mid;
         } else if ([array[mid] integerValue] > target) {
-            right = mid - 1;
+            end = mid;
         } else {
-            left = mid + 1;
+            start = mid;
         }
     }
     
     // 最后两个或1个元素，先看右边的，确保 results[0] 是最左边的
-    if ([array[right] integerValue] == target) {
-        results[0] = @(right);
+    if ([array[end] integerValue] == target) {
+        results[0] = @(end);
     }
     
-    if ([array[left] integerValue] == target) {
-        results[0] = @(left);
+    if ([array[start] integerValue] == target) {
+        results[0] = @(start);
     }
     
     // 同理，处理最右的位置
-    left = 0;
-    right = (int)array.count - 1;
+    start = 0;
+    end = (int)array.count - 1;
     
-    while (left + 1 < right) {
-        int mid = (left + right) / 2;
+    while (start + 1 < end) {
+        int mid = start + (end - start) / 2;
         
         if ([array[mid] integerValue] == target) {
-            left = mid;
+            start = mid;
         } else if ([array[mid] integerValue] > target) {
-            right = mid - 1;
+            end = mid;
         } else {
-            left = mid + 1;
+            start = mid;
         }
-        
-        mid = (left + right) / 2;
     }
     
-    if ([array[left] integerValue] == target) {
-        results[1] = @(left);
+    if ([array[start] integerValue] == target) {
+        results[1] = @(start);
     }
     
-    if ([array[right] integerValue] == target) {
-        results[1] = @(right);
+    if ([array[end] integerValue] == target) {
+        results[1] = @(end);
     }
     
     return results;
