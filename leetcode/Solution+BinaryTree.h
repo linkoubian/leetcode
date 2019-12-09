@@ -23,6 +23,9 @@
 */
 @interface Solution (BinaryTree)
 
+- (BOOL)isTree:(TreeNode *)rootNodeA sameAsTree:(TreeNode *)rootNodeB;
+- (BOOL)isSymmetricTree:(TreeNode *)rootNode;
+
 // 广度优先（层次遍历）
 - (NSArray *)levelOrderTraversal:(TreeNode *)root;
 

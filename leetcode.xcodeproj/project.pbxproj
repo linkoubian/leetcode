@@ -16,10 +16,10 @@
 		523730D92393D27400E7912F /* NSArray+DeltaCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 523730D82393D27400E7912F /* NSArray+DeltaCoder.m */; };
 		5254E523239E1B5200EA1E05 /* Solution+UniquePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E522239E1B5200EA1E05 /* Solution+UniquePaths.m */; };
 		5254E524239E1B5200EA1E05 /* Solution+UniquePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E522239E1B5200EA1E05 /* Solution+UniquePaths.m */; };
-		5254E526239E1E7400EA1E05 /* UniquePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E525239E1E7400EA1E05 /* UniquePaths.m */; };
+		5254E526239E1E7400EA1E05 /* UniquePathsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E525239E1E7400EA1E05 /* UniquePathsTest.m */; };
 		5254E529239E3C6B00EA1E05 /* Solution+Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E528239E3C6B00EA1E05 /* Solution+Subsets.m */; };
 		5254E52A239E3C6B00EA1E05 /* Solution+Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E528239E3C6B00EA1E05 /* Solution+Subsets.m */; };
-		5254E52C239E3F3100EA1E05 /* Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E52B239E3F3100EA1E05 /* Subsets.m */; };
+		5254E52C239E3F3100EA1E05 /* SubsetsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E52B239E3F3100EA1E05 /* SubsetsTest.m */; };
 		52C9585E238554C800313FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9585D238554C800313FBE /* main.m */; };
 		52C95869238A5ECD00313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
 		52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
@@ -66,10 +66,10 @@
 		523730D82393D27400E7912F /* NSArray+DeltaCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DeltaCoder.m"; sourceTree = "<group>"; };
 		5254E521239E1B5200EA1E05 /* Solution+UniquePaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+UniquePaths.h"; sourceTree = "<group>"; };
 		5254E522239E1B5200EA1E05 /* Solution+UniquePaths.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+UniquePaths.m"; sourceTree = "<group>"; };
-		5254E525239E1E7400EA1E05 /* UniquePaths.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UniquePaths.m; sourceTree = "<group>"; };
+		5254E525239E1E7400EA1E05 /* UniquePathsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UniquePathsTest.m; sourceTree = "<group>"; };
 		5254E527239E3C6B00EA1E05 /* Solution+Subsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Solution+Subsets.h"; sourceTree = "<group>"; };
 		5254E528239E3C6B00EA1E05 /* Solution+Subsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Solution+Subsets.m"; sourceTree = "<group>"; };
-		5254E52B239E3F3100EA1E05 /* Subsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Subsets.m; sourceTree = "<group>"; };
+		5254E52B239E3F3100EA1E05 /* SubsetsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubsetsTest.m; sourceTree = "<group>"; };
 		52C9585A238554C800313FBE /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9585D238554C800313FBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52C95867238A5ECD00313FBE /* Solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution.h; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 				52C9589B238CD0E000313FBE /* RobberTest.m */,
 				522A99D4238E157F00A411C6 /* SearchTest.m */,
 				522A99DC238FC62100A411C6 /* LinkedListTest.m */,
-				5254E525239E1E7400EA1E05 /* UniquePaths.m */,
-				5254E52B239E3F3100EA1E05 /* Subsets.m */,
+				5254E525239E1E7400EA1E05 /* UniquePathsTest.m */,
+				5254E52B239E3F3100EA1E05 /* SubsetsTest.m */,
 			);
 			path = "leetcode-test";
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5254E526239E1E7400EA1E05 /* UniquePaths.m in Sources */,
+				5254E526239E1E7400EA1E05 /* UniquePathsTest.m in Sources */,
 				52C95883238A6B5600313FBE /* Solution.m in Sources */,
 				52C95890238B794E00313FBE /* Solution+Array.m in Sources */,
 				52C95884238A6B5A00313FBE /* Solution+String.m in Sources */,
@@ -310,7 +310,7 @@
 				52C95885238A6B5A00313FBE /* Solution+Sorting.m in Sources */,
 				5254E524239E1B5200EA1E05 /* Solution+UniquePaths.m in Sources */,
 				52C95894238BE3F300313FBE /* Solution+Coins.m in Sources */,
-				5254E52C239E3F3100EA1E05 /* Subsets.m in Sources */,
+				5254E52C239E3F3100EA1E05 /* SubsetsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

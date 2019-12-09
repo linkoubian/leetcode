@@ -44,6 +44,35 @@
     self.node20.right = self.node7;
 }
 
+- (void)testSameTree {
+    BOOL isSameTree = [[Solution new] isTree:nil sameAsTree:nil];
+    XCTAssert(isSameTree);
+    
+    isSameTree = [[Solution new] isTree:nil sameAsTree:self.node3];
+    XCTAssert(!isSameTree);
+    
+    isSameTree = [[Solution new] isTree:self.node3 sameAsTree:self.node7];
+    XCTAssert(!isSameTree);
+    
+    isSameTree = [[Solution new] isTree:self.node3 sameAsTree:self.node3];
+    XCTAssert(isSameTree);
+}
+
+- (void)testSymmeticTree {
+    BOOL isSymmetricTree = [[Solution new] isSymmetricTree:nil];
+    XCTAssert(isSymmetricTree);
+    
+    isSymmetricTree = [[Solution new] isSymmetricTree:self.node15];
+    XCTAssert(isSymmetricTree);
+    
+    isSymmetricTree = [[Solution new] isSymmetricTree:self.node20];
+    XCTAssert(!isSymmetricTree);
+    
+    self.node7.value = 15;
+    isSymmetricTree = [[Solution new] isSymmetricTree:self.node20];
+    XCTAssert(isSymmetricTree);
+}
+
 - (void)testLevelOrderTraversal {
     NSLog(@"levelOrderTraversal: %@", [[Solution new] levelOrderTraversal:self.node3]);
 }

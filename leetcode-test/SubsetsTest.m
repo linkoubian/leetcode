@@ -1,5 +1,5 @@
 //
-//  Subsets.m
+//  SubsetsTest.m
 //  leetcode-test
 //
 //  Created by Linkou Bian on 2019/12/9.
@@ -9,13 +9,13 @@
 #import <XCTest/XCTest.h>
 #import "Solution+Subsets.h"
 
-@interface Subsets : XCTestCase
+@interface SubsetsTest : XCTestCase
 
 @end
 
-@implementation Subsets
+@implementation SubsetsTest
 
-- (void)testExample {
+- (void)testSubsets {
     NSArray *sourceArray = @[@1, @2, @3];
     NSArray *subsets = [[Solution new] subsetsOfArray:sourceArray];
     NSLog(@"subsets: %@", subsets);

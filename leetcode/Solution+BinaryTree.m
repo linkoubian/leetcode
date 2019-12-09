@@ -22,6 +22,49 @@
 
 @implementation Solution (BinaryTree)
 
+- (BOOL)isTree:(TreeNode *)rootNodeA sameAsTree:(TreeNode *)rootNodeB {
+    // nil && nil
+    if (!rootNodeA && !rootNodeB) {
+        return YES;
+    }
+    
+    // 走到这里必然有个非 nil, 所以只需额外判断存在一个 nil 即可
+    if (!rootNodeA || !rootNodeB) {
+        return NO;
+    }
+    
+    // !nil && !nil
+    if (rootNodeA.value != rootNodeB.value) {
+        return NO;
+    }
+    
+    return [self isTree:rootNodeA.left sameAsTree:rootNodeB.left] && [self isTree:rootNodeA.right sameAsTree:rootNodeB.right];
+}
+
+- (BOOL)isTree:(TreeNode *)rootNodeA mirrorOf:(TreeNode *)rootNodeB {
+    if (!rootNodeA && !rootNodeB) {
+        return YES;
+    }
+    
+    if (!rootNodeA || !rootNodeB) {
+        return NO;
+    }
+    
+    if (rootNodeA.value != rootNodeB.value) {
+        return NO;
+    }
+    
+    return [self isTree:rootNodeA.left mirrorOf:rootNodeB.right] && [self isTree:rootNodeA.right mirrorOf:rootNodeB.left];
+}
+
+- (BOOL)isSymmetricTree:(TreeNode *)rootNode {
+    if (!rootNode) {
+        return YES;
+    }
+    
+    return [self isTree:rootNode.left mirrorOf:rootNode.right];
+}
+
 /*!
  *  @brief      分层访问二叉树的节点 (从左到右, 一层一层的)，核心是使用 Queue 这样的数据结构
  *  @see        http://www.goodtecher.com/zh/leetcode-102-binary-tree-level-order-traversal-二叉树的层次遍历/

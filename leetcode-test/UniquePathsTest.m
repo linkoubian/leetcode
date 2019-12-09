@@ -1,5 +1,5 @@
 //
-//  UniquePaths.m
+//  UniquePathsTest.m
 //  leetcode-test
 //
 //  Created by Linkou Bian on 2019/12/9.
@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "Solution+UniquePaths.h"
 
-@interface UniquePaths : XCTestCase
+@interface UniquePathsTest : XCTestCase
 
 @end
 
-@implementation UniquePaths
+@implementation UniquePathsTest
 
 - (void)testUniquePaths {
     NSArray *obstacles = @[
