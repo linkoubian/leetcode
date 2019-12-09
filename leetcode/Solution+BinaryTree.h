@@ -25,6 +25,9 @@
 
 - (BOOL)isTree:(TreeNode *)rootNodeA sameAsTree:(TreeNode *)rootNodeB;
 - (BOOL)isSymmetricTree:(TreeNode *)rootNode;
+- (BOOL)isBalancedTree:(TreeNode *)rootNode;
+- (NSUInteger)minDepth:(TreeNode *)rootNode;
+- (NSUInteger)maxDepth:(TreeNode *)rootNode;
 
 // 广度优先（层次遍历）
 - (NSArray *)levelOrderTraversal:(TreeNode *)root;

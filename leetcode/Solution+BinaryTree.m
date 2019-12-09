@@ -65,6 +65,57 @@
     return [self isTree:rootNode.left mirrorOf:rootNode.right];
 }
 
+- (NSInteger)heightOfNode:(TreeNode *)node {
+    if (!node) {
+        return 0;
+    }
+    
+    NSInteger leftHeight = [self heightOfNode:node.left];
+    NSInteger rightHeight = [self heightOfNode:node.right];
+    
+    if (leftHeight == -1 || rightHeight == -1) {
+        return -1;
+    }
+    
+    if (ABS(leftHeight - rightHeight) > 1) {
+        return -1;
+    }
+    
+    return MAX(leftHeight, rightHeight) + 1;
+}
+
+- (BOOL)isBalancedTree:(TreeNode *)rootNode {
+    return [self heightOfNode:rootNode] != -1;
+}
+
+- (NSUInteger)minDepth:(TreeNode *)rootNode {
+    if (!rootNode) {
+        return 0;
+    }
+    
+    if (!rootNode.left && !rootNode.right) {
+        return 1;
+    }
+    
+    if (!rootNode.left) {
+        return [self minDepth:rootNode.right] + 1;
+    }
+    
+    if (!rootNode.right) {
+        return [self minDepth:rootNode.left] + 1;
+    }
+    
+    return MIN([self minDepth:rootNode.right], [self minDepth:rootNode.left]) + 1;
+}
+
+- (NSUInteger)maxDepth:(TreeNode *)rootNode {
+    if (!rootNode) {
+        return 0;
+    }
+    
+    return MAX([self minDepth:rootNode.right], [self minDepth:rootNode.left]) + 1;
+}
+
 /*!
  *  @brief      分层访问二叉树的节点 (从左到右, 一层一层的)，核心是使用 Queue 这样的数据结构
  *  @see        http://www.goodtecher.com/zh/leetcode-102-binary-tree-level-order-traversal-二叉树的层次遍历/
