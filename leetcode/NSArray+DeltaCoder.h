@@ -10,4 +10,6 @@
 
 @interface NSArray (DeltaCoder)
 
+- (NSArray *)deltaDecoded;
+
 @end

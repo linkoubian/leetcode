@@ -20,6 +20,7 @@
 		5254E529239E3C6B00EA1E05 /* Solution+Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E528239E3C6B00EA1E05 /* Solution+Subsets.m */; };
 		5254E52A239E3C6B00EA1E05 /* Solution+Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E528239E3C6B00EA1E05 /* Solution+Subsets.m */; };
 		5254E52C239E3F3100EA1E05 /* SubsetsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E52B239E3F3100EA1E05 /* SubsetsTest.m */; };
+		5254E52D239F93B600EA1E05 /* NSArray+DeltaCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 523730D82393D27400E7912F /* NSArray+DeltaCoder.m */; };
 		52C9585E238554C800313FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9585D238554C800313FBE /* main.m */; };
 		52C95869238A5ECD00313FBE /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C95868238A5ECD00313FBE /* Solution.m */; };
 		52C9586C238A5F6000313FBE /* Solution+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C9586B238A5F6000313FBE /* Solution+Sorting.m */; };
@@ -309,6 +310,7 @@
 				52C95888238A6C4900313FBE /* BinaryTreeTest.m in Sources */,
 				52C95885238A6B5A00313FBE /* Solution+Sorting.m in Sources */,
 				5254E524239E1B5200EA1E05 /* Solution+UniquePaths.m in Sources */,
+				5254E52D239F93B600EA1E05 /* NSArray+DeltaCoder.m in Sources */,
 				52C95894238BE3F300313FBE /* Solution+Coins.m in Sources */,
 				5254E52C239E3F3100EA1E05 /* SubsetsTest.m in Sources */,
 			);

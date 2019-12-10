@@ -14,18 +14,16 @@
     NSMutableArray *result = [NSMutableArray new];
     
     for (int i = 0; i < self.count; i++) {
-        NSInteger num = [self[i] integerValue];
-        
-        if (num == 0) {
+        if (i == 0) {
             [result addObject:self[i]];
             continue;
         }
         
-        if (num == -128) {
+        if ([self[i] integerValue] == -128) {
             continue;
         }
         
-        [result addObject:@(num + [[result lastObject] integerValue])];
+        [result addObject:@([self[i] integerValue] + [[result lastObject] integerValue])];
     }
     
     return [result copy];

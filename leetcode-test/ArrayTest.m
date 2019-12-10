@@ -8,12 +8,23 @@
 
 #import <XCTest/XCTest.h>
 #import "Solution+Array.h"
+#import "NSArray+DeltaCoder.h"
 
 @interface ArrayTest : XCTestCase
 
 @end
 
 @implementation ArrayTest
+
+- (void)testArrayDeltaCoder {
+    NSArray *array = @[@1000, @-128, @-1000, @100];
+    NSArray *result = [array deltaDecoded];
+    NSLog(@"%@", result);
+    
+    array = @[@25626, @-128, @131, @-128, @-1390, @-100, @-128, @-24251, @84, @-98, @-128, @7275];
+    result = [array deltaDecoded];
+    NSLog(@"%@", result);
+}
 
 - (void)testMaxSubArray {
     NSArray *array = @[@-2, @1, @-3, @4, @-1, @2, @1, @-5, @4];
