@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Solution+Array.h"
 #import "NSArray+DeltaCoder.h"
+#import "Solution.h"
 
 @interface ArrayTest : XCTestCase
 
@@ -23,6 +24,12 @@
     
     array = @[@25626, @-128, @131, @-128, @-1390, @-100, @-128, @-24251, @84, @-98, @-128, @7275];
     result = [array deltaDecoded];
+    NSLog(@"%@", result);
+}
+
+- (void)testAnagrams {
+    NSArray *array = @[@"pear", @"amleth", @"dormitory", @"tinsel", @"dirty room", @"hamlet", @"listen", @"silent"];
+    NSArray *result = [[Solution new] groupAnagrams:array];
     NSLog(@"%@", result);
 }
 

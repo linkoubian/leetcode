@@ -56,12 +56,13 @@ void printArrays(int row, int col, long data[row][col]) {
         dict[@(ch)] = @([dict[@(ch)] integerValue] - 1);
     }
     
+    for (NSNumber *num in [dict allValues]) {
+        if ([num integerValue] > 0) {
+            return NO;
+        }
+    }
+    
     return YES;
-}
-
-- (NSString *)alphabeticallyString:(NSMutableArray *)array {
-    NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    return [sortedArray componentsJoinedByString:@","];
 }
 
 - (NSArray *)groupAnagrams:(NSArray<NSString *> *)lines {
@@ -83,10 +84,57 @@ void printArrays(int row, int col, long data[row][col]) {
             }
         }
         
-        [results addObject:[self alphabeticallyString:words]];
+        NSArray *sortedWords = [words sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSString *sortedWordsString = [sortedWords componentsJoinedByString:@","];
+        [results addObject:sortedWordsString];
     }
     
-    return [results copy];
+    return [results sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
+
+- (NSString *)keyForWord:(NSString *)word {
+    NSMutableArray *array = [NSMutableArray new];
+    for (int i = 0; i < word.length; i++) {
+        unichar ch = [word characterAtIndex:i];
+        
+        if (ch == ' ') {
+            continue;
+        }
+        
+        [array addObject:[NSString stringWithFormat:@"%c", ch]];
+    }
+    
+    NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    return [sortedArray componentsJoinedByString:@""];
+}
+
+- (NSArray *)groupAnagrams_v2:(NSArray<NSString *> *)words {
+    // 单词（字符串）按字母排序后作为 KEY，则属于 anagram 的对应同一个 KEY；
+    // 根据上述 KEY 分组单词。
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    
+    for (NSString *word in words) {
+        NSString *key = [self keyForWord:word];
+        
+        if (!dict[key]) {
+            NSMutableArray *array = [NSMutableArray new];
+            dict[key] = array;
+        }
+        
+        [dict[key] addObject:word];
+    }
+    
+    // 每个分组的所有单词按字母排序后用逗号连接，并存入到结果字符串数组
+    NSMutableArray *results = [NSMutableArray new];
+    
+    for (NSArray *words in [dict allValues]) {
+        NSArray *sortedWords = [words sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSString *sortedWordsStr = [sortedWords componentsJoinedByString:@","];
+        [results addObject:sortedWordsStr];
+    }
+    
+    // 结果字符串数组再按字母排序，返回排序后的数组
+    return [results sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 @end
