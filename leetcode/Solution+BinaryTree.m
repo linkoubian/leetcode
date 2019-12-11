@@ -113,7 +113,7 @@
         return 0;
     }
     
-    return MAX([self minDepth:rootNode.right], [self minDepth:rootNode.left]) + 1;
+    return MAX([self maxDepth:rootNode.right], [self maxDepth:rootNode.left]) + 1;
 }
 
 /*!
