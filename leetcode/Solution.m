@@ -137,4 +137,18 @@ void printArrays(int row, int col, long data[row][col]) {
     return [results sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
++ (NSInteger)priceRounding:(NSInteger)cents withN:(NSUInteger)n {
+    int roundUnit = (int)pow(10, n);
+    NSInteger roundedA = cents / roundUnit * roundUnit;
+    NSInteger roundedB = roundedA + roundUnit * (cents > 0 ? 1 : -1);
+    
+    if (ABS(cents - roundedA) == ABS(cents - roundedB)) {
+        return cents > 0 ? roundedB : roundedA;
+    } else if (ABS(cents - roundedA) < ABS(cents - roundedB)) {
+        return roundedA;
+    } else {
+        return roundedB;
+    }
+}
+
 @end

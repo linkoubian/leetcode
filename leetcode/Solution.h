@@ -22,4 +22,6 @@ void printArrays(int row, int col, long data[row][col]);
 - (NSArray *)groupAnagrams:(NSArray<NSString *> *)lines;
 - (NSArray *)groupAnagrams_v2:(NSArray<NSString *> *)words;
 
++ (NSInteger)priceRounding:(NSInteger)cents withN:(NSUInteger)n;
+
 @end
