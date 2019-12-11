@@ -23,5 +23,6 @@ void printArrays(int row, int col, long data[row][col]);
 - (NSArray *)groupAnagrams_v2:(NSArray<NSString *> *)words;
 
 + (NSInteger)priceRounding:(NSInteger)cents withN:(NSUInteger)n;
++ (NSArray *)polygonCount:(NSArray *)sidesArray;
 
 @end

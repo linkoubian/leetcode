@@ -29,4 +29,20 @@
     XCTAssert(result == -3100);
 }
 
+- (void)testPolygons {
+    NSArray *data = @[@"36 30 36 30",
+                      @"30 36 30 30",
+                      @"15 15 15 15",
+                      @"46 96 90 90 100",
+                      @"100 200 100 200",
+                      @"-100 -100 -100",
+                      @"100",
+    ];
+    NSArray *result = [Solution polygonCount:data];
+    XCTAssert([result[0] integerValue] == 1);
+    XCTAssert([result[1] integerValue] == 2);
+    XCTAssert([result[2] integerValue] == 2);
+    XCTAssert([result[3] integerValue] == 2);
+}
+
 @end

@@ -151,4 +151,58 @@ void printArrays(int row, int col, long data[row][col]) {
     }
 }
 
++ (NSArray *)polygonCount:(NSArray *)sidesArray {
+    NSMutableArray *results = [NSMutableArray new];
+    results[0] = @0;
+    results[1] = @0;
+    results[2] = @0;
+    results[3] = @0;
+    
+    for (int i = 0; i < sidesArray.count; i++) {
+        NSString *sidesString = sidesArray[i];
+        NSArray *sides = [sidesString componentsSeparatedByString:@" "];
+        
+        BOOL existsNegative = NO;
+        for (int i = 0; i < sides.count; i++) {
+            if ([sides[i] integerValue] <= 0) {
+                existsNegative = YES;
+                break;
+            }
+        }
+        
+        if (existsNegative) {
+            results[3] = @([results[3] integerValue] + 1);
+            continue;
+        }
+        
+        // not polygons
+        if (sides.count < 3) {
+            results[3] = @([results[3] integerValue] + 1);
+        }
+        // other polygons with 3 or 5 or more sides
+        else if (sides.count == 3 || sides.count > 4) {
+            results[2] = @([results[2] integerValue] + 1);
+        }
+        // 4 sides
+        else {
+            // all sides equal to each other
+            if ([sides[0] integerValue] == [sides[1] integerValue]
+                && [sides[1] integerValue] == [sides[2] integerValue]
+                && [sides[2] integerValue] == [sides[3] integerValue]) {
+                results[0] = @([results[0] integerValue] + 1);
+            }
+            // side equals to the opposite one
+            else if ([sides[0] integerValue] == [sides[2] integerValue] && [sides[1] integerValue] == [sides[3] integerValue]) {
+                results[1] = @([results[1] integerValue] + 1);
+            }
+            // other polygons with 4 sides
+            else {
+                results[2] = @([results[2] integerValue] + 1);
+            }
+        }
+    }
+    
+    return results;
+}
+
 @end
