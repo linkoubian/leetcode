@@ -27,4 +27,7 @@
 
 - (NSInteger)posOfString:(NSString *)str inAnotherString:(NSString *)string;
 
+// 字符串反转
++ (NSString *)reversedString:(NSString *)str;
+
 @end

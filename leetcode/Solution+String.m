@@ -219,4 +219,20 @@
     return -1;
 }
 
++ (NSString *)reversedString:(NSString *)str {
+    NSMutableString *result = [NSMutableString new];
+    
+//    for (NSInteger i = str.length - 1; i >= 0; i--) {
+//        [result appendString:[NSString stringWithFormat:@"%c", [str characterAtIndex:i]]];
+//    }
+    
+    // 支持中文
+    for (NSInteger i = str.length - 1; i >= 0; i--) {
+        NSRange subStrRange = NSMakeRange(i, 1);
+        [result appendString:[str substringWithRange:subStrRange]];
+    }
+    
+    return result;
+}
+
 @end

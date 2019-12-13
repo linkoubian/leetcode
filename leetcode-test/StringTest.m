@@ -91,4 +91,14 @@
     XCTAssert(pos == -1);
 }
 
+- (void)testStringReverse {
+    NSString *str = @"I love China people";
+    NSString *result = [Solution reversedString:str];
+    NSLog(@"%@", result);
+    
+    str = @"我爱中国人民";
+    result = [Solution reversedString:str];
+    NSLog(@"%@", result);
+}
+
 @end
