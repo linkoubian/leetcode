@@ -101,4 +101,38 @@
     NSLog(@"%@", result);
 }
 
+- (void)testShallowCopy {
+    NSObject *obj = [NSObject new];
+    NSArray *array = [[NSArray alloc] initWithObjects:obj, nil];
+    NSArray *copiedArray = [array copy];
+    NSArray *mCopiedArray = [array mutableCopy];
+    
+    NSLog(@"%p", array);
+    NSLog(@"%p", copiedArray);
+    NSLog(@"%p", mCopiedArray);
+    
+    NSLog(@"%p", copiedArray[0]);
+    NSLog(@"%p", mCopiedArray[0]);
+    
+    printf("\n");
+    
+    NSMutableArray *mArray = [[NSMutableArray alloc] initWithObjects:obj, nil];
+    NSArray *copiedMArray = [mArray copy];
+    NSArray *mCopiedMArray = [mArray mutableCopy];
+    
+    NSLog(@"%p", mArray);
+    NSLog(@"%p", copiedMArray);
+    NSLog(@"%p", mCopiedMArray);
+    
+    NSLog(@"%p", copiedMArray[0]);
+    NSLog(@"%p", mCopiedMArray[0]);
+    
+    printf("\n");
+    
+    mArray[0] = [NSObject new];
+    NSLog(@"%p", mArray[0]);
+    NSLog(@"%p", copiedMArray[0]);
+    NSLog(@"%p", mCopiedMArray[0]);
+}
+
 @end
