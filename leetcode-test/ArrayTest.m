@@ -73,4 +73,47 @@
     XCTAssert([results count] == 3);
 }
 
+- (void)testBlockWithInt {
+    int num = 3;
+    
+    int(^block)(int) = ^int(int n) {
+        NSLog(@"num is %d", num);
+        return num * n;
+    };
+    
+    num = 1;
+    NSLog(@"%d", block(2));
+}
+
+- (void)testBlockWithMutableString {
+    __block NSMutableString *s = [[NSMutableString alloc] initWithFormat:@"%d", 1];
+    
+    void(^block)(void) = ^ {
+        s = [NSMutableString stringWithFormat:@"%d", 99];
+        [s appendFormat:@", %d", 2];
+        NSLog(@"%@", s);
+        NSLog(@"in: %p", s);
+    };
+    
+    [s appendFormat:@", %d", 3];
+    NSLog(@"out: %p", s);
+    block();
+}
+
+- (void)testBlockWithMutableArray {
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@1, @2, nil];
+    
+    void(^block)(void) = ^ {
+        NSLog(@"%@", array);
+        [array addObject:@3];
+        NSLog(@"%@", array);
+    };
+    
+    [array addObject:@4];
+    array = nil;
+
+    NSLog(@"%@", array);
+    block();
+}
+
 @end
